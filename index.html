@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAgro - Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>EcoAgro</h1>
+        <p>Agroforte, Futuro Sustentável: O Equilíbrio Perfeito</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Simulador de Equilíbrio Ambiental</h2>
+            <p>Insira os dados da sua propriedade para calcular o índice de sustentabilidade:</p>
+            
+            <form id="form-calculadora">
+                <div class="input-group">
+                    <label for="area-preservada">Área de Preservação (% da fazenda):</label>
+                    <input type="number" id="area-preservada" min="0" max="100" placeholder="Ex: 20" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="defensivos">Uso de Defensivos Químicos:</label>
+                    <select id="defensivos" required>
+                        <option value="alto">Alto uso / Sem critérios</option>
+                        <option value="moderado">Moderado / Apenas quando necessário</option>
+                        <option value="biologico">Foco em Bioinsumos / Controle Biológico</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="agua">Manejo de Água (Irrigação):</label>
+                    <select id="agua" required>
+                        <option value="tradicional">Inundação ou Aspersão comum (gasta mais)</option>
+                        <option value="gotejamento">Gotejamento ou Monitoramento por sensores</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="calcularSustentabilidade()">Calcular Índice</button>
+            </form>
+
+            <div id="resultado" class="hidden">
+                <h3>Resultado da sua Fazenda:</h3>
+                <div id="score-box">0%</div>
+                <p id="diagnostico"></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Pilares para um Agroforte e Sustentável</h2>
+            <div class="pilares-grid">
+                <div class="pilar-item">
+                    <h3>🌾 Tecnologia de Precisão</h3>
+                    <p>Usar sensores e drones evita o desperdício de água e defensivos, aplicando o insumo apenas onde a planta precisa.</p>
+                </div>
+                <div class="pilar-item">
+                    <h3>🐛 Controle Biológico</h3>
+                    <p>Substituir ou reduzir químicos por inimigos naturais das pragas protege o solo, a água e a saúde do consumidor.</p>
+                </div>
+                <div class="pilar-item">
+                    <h3>🌳 Integração L-P-F</h3>
+                    <p>Integrar Lavoura, Pecuária e Floresta recupera o solo, sequestra carbono e aumenta o lucro do produtor.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido para o Concurso Agrinho 2026 • Tema: Agroforte, Futuro Sustentável</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
